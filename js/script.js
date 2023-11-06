@@ -67,3 +67,7 @@ function download(input){
         img.src = reader.result;
     }
 }
+
+
+// Меню профиля
+
