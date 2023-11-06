@@ -1,0 +1,328 @@
+/* gilroy medium
+gilroy semibold
+gilroy bold */
+
+
+@font-face {
+    font-family: 'Gilroy';
+    src: local('Gilroy SemiBold'), local('Gilroy-SemiBold'),url('../fonts/Gilroy-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+
+
+@font-face {
+    font-family: 'Gilroy';
+    src: local('Gilroy Regular'), local('Gilroy-Regular'),
+        url('../fonts/Gilroy-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: 'Gilroy';
+    src: local('Gilroy Medium'), local('Gilroy-Medium'),
+        url('../fonts/Gilroy-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: 'Gilroy';
+    src: local('Gilroy Bold'), local('Gilroy-Bold'),
+        url('../fonts/Gilroy-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Gilroy';
+    src: local('Gilroy Black'), local('Gilroy-Black'),
+        url('../fonts/Gilroy-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+input::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
+input::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
+input:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
+input:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
+input:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+input:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+input:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
+
+
+
+body{
+    background-color: #12000C;
+}
+
+.main-logo{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    margin-left: 5%;
+    margin-top: 5%;
+    color: white;
+}
+.main-logo img{
+    width: 50px;
+}
+.name-logo{
+    font-family: 'Gilroy';
+    font-weight: bold;
+    font-size: 22px;
+    margin-left: 15px;
+}
+.modal-container{
+    /* margin-top: 150px; */
+    /* flex-shrink: 0; */
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: space-between;
+    width: 90%;
+    max-width: 500px;
+    height: 100vh;
+    min-height: 400px;
+    max-height: 600px;
+    border-radius: 50px;
+    /* background: linear-gradient(174deg, rgba(52, 0, 35, 0.30) 15.4%, rgba(255, 255, 255, 0.00) 176.61%);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgb(66, 1, 24); */
+    position: absolute;
+    /* transform: translateX(100%); */
+    opacity: 0;
+}
+.progress-bar{
+    /* margin-top: auto; */
+}
+.progress-bar img{
+    width: 100%;
+}
+.modal-container{
+    margin-right: 0px;
+}
+
+
+.modal-title{
+    font-family: 'Gilroy';
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+    width: fit-content;
+    text-align: start;
+    margin-bottom: 20px;
+}
+.input-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50%;
+    height: 250px;
+}
+.modal-input{
+    border-radius: 0px;
+    background: rgba(255, 255, 255, 0);
+    margin-top: 20px;
+    border: none;
+    border-bottom: 1px solid white;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto; 
+    height: 40px;
+    font-family: 'Gilroy';
+    color: white;
+    text-align: start;
+    font-weight: 600;
+    font-size: 18px;
+    outline:none;
+}
+.modal-input::placeholder{
+    font-weight: 600;
+    font-size: 18px;
+    padding-left: 15px;
+    text-align: start;
+}
+.modal-input-file{
+    display: none;
+}
+
+
+
+.modal-input-file::placeholder{
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.next-btn{
+    text-wrap: nowrap;
+    margin-top: auto;
+    margin-bottom: 40px;
+    padding: 20px;
+    min-width: 180px;
+    font-family: 'Gilroy';
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    color: white;
+    background: linear-gradient(201deg, #FF51EE 13.75%, #811FFF 87.04%);
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+}
+.visible{
+    opacity: 1;
+    transition: .3s ease;
+    display: flex !important ;
+    z-index: 12;
+}
+.modal-slider{
+    display: flex;
+    /* overflow: hidden; */
+    justify-content: center;
+}
+
+.animation{
+    transform: translateX(0);
+    transition: cubic-bezier(0.55, 0.055, 0.675, 0.19)s ease;
+}
+
+.animation-2{
+    transform: translateX(-100%);
+    transition: .3s ease;
+}
+.back-btn{
+    /* position: absolute; */
+    margin-left: auto;
+     margin-right: auto;
+    bottom: 0;
+    color: white;
+    font-family: 'Gilroy';
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.back-btn::before{
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 10px;
+    background-image: url(../img/arrow.svg);
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.img__wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12300px;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.img__wrapper img{
+    width: 150px;
+}
+
+/* #modal-container-3{
+    height: 600px;
+    max-height: 1000px;
+    display: none;
+} */
+
+
+.form_radio_btn:not(:last-child) {
+	/* display: inline-block; */
+	/* margin-right: 10px; */
+    margin-top: 30px;
+}
+.form_radio_btn input[type=radio] {
+	display: none;
+}
+.form_radio_btn label {
+	display: flex;
+    justify-content: center;
+	cursor: pointer;
+	padding: 15px;
+	line-height: 34px;
+	border: 2px solid #BBBBBB;
+	border-radius: 1000px;
+	user-select: none;
+    width: 80%;
+    font-family: 'Gilroy';
+    color: white;
+    font-size: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+}
+
+
+/* Checked */
+.form_radio_btn input[type=radio]:checked + label {
+    border-color: #DC21BB;
+    color: #DC21BB;
+}
+ 
+/* Hover */
+.form_radio_btn label:hover {
+	color: #DC21BB;
+}
+ 
+
+
+/* Disabled */
+.form_radio_btn input[type=radio]:disabled + label {
+	background: #efefef;
+	color: #666;
+}
+
+.form_file_btn{
+    margin-top: 15px;
+}
+
+
+.form_file_btn input[type=radio] {
+	display: none;
+}
+.form_file_btn label {
+	display: flex;
+    justify-content: center;
+	cursor: pointer;
+	padding: 10px;
+	line-height: 34px;
+	border: 2px solid #BBBBBB;
+	border-radius: 1000px;
+	user-select: none;
+    width: 60%;
+    font-family: 'Gilroy';
+    color: white;
+    font-size: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+}
