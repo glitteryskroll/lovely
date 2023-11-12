@@ -18,35 +18,70 @@
         </span>
     </a>
     <div class="feed-container">
-        <div class="filter-container-btn" id="filter-btn">
-            <span>Фильтр поиска</span>
+        <div class="filter-container-btn" id="filter-open-btn">
             <img src="./img/filter.svg" alt="">
         </div>
 
-        <div class="filter-container" style="display: none;">
+        <div class="filter-container" id="filter-container">
             <div class="filter-close-btn" id="filter-close-btn">
-                
+                Назад
             </div>
             <h1>Фильтр поиска</h1>
             <form action="">
                 <h2>Пол</h2>
-                <input type="radio" name="sex" value="man" checked> мужской
-                <input type="radio" name="sex" value="woman"> женский
+                <select class="filter-select" name="" id="">
+                    <option value="">мужской</option>
+                    <option value=""> женский</option>
+                </select>
                 <h2>Возраст</h2>
                 <div class="age-filter">
-                    <label for="age-from">От</label>
-                    <input type="number" name="name" id="age-from" placeholder="От" >
+                    <div class="age-container">
+                        <label for="age-from">От</label>
+                        <input class="age-input" type="number" name="name" id="age-from" placeholder="18" >
+                    </div>
                     <br>
-                    <label for="age-to">До</label>
-                    <input type="number" name="name" id="age-to" placeholder="До" >
+                    <div class="age-container">
+                        <label for="age-to">До</label>
+                    <input class="age-input" type="number" name="name" id="age-to" placeholder="" >
+                    </div>
                     
                 </div>
-                <select name="" id="">
+                <h2>Тип отношений</h1>
+                <select class="filter-select" name="" id="">
                     <option value="">mlt</option>
                 </select>
-                
-                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-                
+                <br>
+                <h1>Увлечения</h1>
+            <div class="interests-container">
+                <div class="interests-item">
+                    Фильмы-Сериалы
+                    <img class="interests-item-img" src="./img/delete-item.svg" alt="">
+                </div>
+                <div class="interests-item">
+                    Прогулки
+                    <img class="interests-item-img" src="./img/delete-item.svg" alt="">
+                </div>
+                <div class="interests-item">
+                    Фильмы-Сериалы
+                    <img class="interests-item-img" src="./img/delete-item.svg" alt="">
+                </div>
+                <div class="add">
+                    <img  src="./img/plus.svg" alt="">
+                </div>
+            </div>
+
+            <h2>Радиус поиска</h1>
+            <div class="range-container">
+                <input type="range" min="1" max="50000" value="90" class="slider" id="myRange" oninput="fun()">
+                <div class="range-value" id="range-value"></div>
+            </div>
+           
+            <button class="settings-btn-save delete">
+                Сбросить фильтр
+            </button>
+            <button class="settings-btn-save">
+                Применить фильтр
+            </button>
             </form>
             
 
