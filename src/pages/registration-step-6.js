@@ -5,7 +5,7 @@ import deleteItem from '../img/delete-item.svg';
 
 const Registration_step_6= () => {
   return (
-    <main className='main'>
+    <main className='main-register'>
       <Header></Header>
       <button className='back-btn'>
         <img src={backImg} alt="" />

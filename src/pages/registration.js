@@ -3,7 +3,7 @@ import logoImg from '../img/Group 1948757223.svg'
 
 const Registration= () => {
   return (
-    <main className='main'>
+    <main className='main-register'>
       <Header></Header>
       <form action="" className='form-registration'>
         <h1>Как вас зовут?</h1>

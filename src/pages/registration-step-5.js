@@ -19,7 +19,7 @@ function download(input){
 
 const Registration_step_5= () => {
   return (
-    <main className='main'>
+    <main className='main-register'>
       <Header></Header>
       <button className='back-btn'>
         <img src={backImg} alt="" />

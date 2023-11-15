@@ -16,6 +16,7 @@ import Registration_step_7 from './pages/registration-step-7';
 import Profile from './pages/profile';
 import Profile_edit from './pages/profile-edit';
 import Feed from './pages/feed';
+import Likepage from './pages/page';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -30,6 +31,7 @@ root.render(
     {/* <Profile></Profile> */}
     {/* <Profile_edit></Profile_edit> */}
     <Feed></Feed>
+    {/* <Likepage></Likepage> */}
   </React.StrictMode>
 );
 

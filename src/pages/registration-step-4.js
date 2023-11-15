@@ -3,7 +3,7 @@ import backImg from '../img/back-btn.svg'
 
 const Registration_step_4= () => {
   return (
-    <main className='main'>
+    <main className='main-register'>
       <Header></Header>
       <button className='back-btn'>
         <img src={backImg} alt="" />
